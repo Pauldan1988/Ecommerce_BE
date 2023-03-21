@@ -12,7 +12,7 @@ ProductTag.init(
       primaryKey: true,
       autoIncrement: true
     },
-    product_id: {
+    productId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -20,7 +20,7 @@ ProductTag.init(
         key: "id"
       }
     },
-    tag_id: {
+    tagId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
