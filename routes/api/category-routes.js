@@ -48,12 +48,12 @@ router.put('/:id', async (req, res) => {
     },
   })
   if (!updateCat[0]) {
-    res.status(200).json({message: "Category not updated"})
+    res.status(400).json({message: "Category not updated"})
     return
   }
   res.status(200).json(updateCat)
 } catch (err) {
-  res.status(500).json({message: "err"})
+  res.status(500).json(err)
 }
   // update a category by its `id` value
 });
@@ -67,7 +67,7 @@ router.delete('/:id', async (req, res) => {
     })
   return res.status(200).json({delCat})
   } catch (err) {
-    return res.status(400).json({message: "Category was not deleted"})
+    return res.status(500).json(err)
   }
   // delete a category by its `id` value
 });
