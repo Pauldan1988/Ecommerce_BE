@@ -39,8 +39,8 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => { //Needs finished
   try {
-    const tagName = req.body.tag_name
-    const newTag = await Tag.create({ Tag: tagName })
+    const { tag_name } = req.body
+    const newTag = await Tag.create({ tag_name })
     const newTagPlain = newTag.get({ plain: true })
     console.log(newTagPlain, "newTagPlain")
     return res.status(200).json({ newTagPlain })
