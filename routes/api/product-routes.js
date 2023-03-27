@@ -56,13 +56,13 @@ router.get('/:id', async (req, res) => {
 
 // create new product
 
-{
-  "product_name: Self Help Book",
-  "price: 5.00",
-  "stock: 300",
-  "category_id: 6",
-  "tagIds:" [6, 7, 8, 9]
-}
+// {
+//   "product_name": "Self Help Book",
+//   "price": 5.00,
+//   "stock": 300,
+//   "category_id": 6,
+//   "tagIds": [6]
+// }
 
 router.post('/', (req, res) => {
   console.log(req.body)
